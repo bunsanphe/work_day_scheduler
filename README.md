@@ -28,6 +28,9 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
+### Deployment
+https://bunsanphe.github.io/work_day_scheduler/
+
 The following animation demonstrates the application functionality:
 
 ![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)

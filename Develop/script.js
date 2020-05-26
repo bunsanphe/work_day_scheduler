@@ -5,9 +5,7 @@ var currentDateEl = $("#currentDay")
 //*current date
 var currentDate = moment().format("dddd - MMMM DD, YYYY");
 currentDateEl.html(currentDate);
-var currentTime = moment().format("HH");
-console.log(currentTime);
-})
+
 
 //*set into local storage
 $(".saveBtn").on("click", function (event) {
@@ -17,7 +15,6 @@ $(".saveBtn").on("click", function (event) {
     localStorage.setItem(hrKey, hrValue)
 })
 
-console.log(this)
 //*render back into page
 $(".hour-8 .input").val(localStorage.getItem("8:00 AM"))
 $(".hour-9 .input").val(localStorage.getItem("9:00 AM"))
@@ -33,12 +30,9 @@ $(".hour-5 .input").val(localStorage.getItem("5:00 PM"))
 //*highlight row based on hour
 $(".input").each(function(){
     var buttonHour = $(this).data("hour")
-    console.log(buttonHour)
     var currentTime = moment().format("HH");
-    // currentTime = 15
     if(buttonHour == currentTime){
         $(this).addClass("present")
-        console.log(currentTime)
     }
     else if(buttonHour <= currentTime){
         $(this).addClass("past")
@@ -48,7 +42,7 @@ $(".input").each(function(){
     }
 })
 
-
+})
 //**Another way to saving and rendering it from localStorage */
 //*save to local storage when button is clicked by event
 // $(".saveBtn").on("click", function (event) {
